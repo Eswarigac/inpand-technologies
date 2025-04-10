@@ -1,0 +1,170 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+}
+
+.stat-box h4 {
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(23, 138, 238);
+}
+
+.button {
+    display: flex;
+    width: 650px;
+    justify-content: flex-start;
+}
+
+.chaty-channel {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 1000;
+}
+
+.chaty-channel img {
+    width: 50px;
+    height: auto;
+}
+
+#back-button {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #fff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    text-align: center;
+    font-size: 24px;
+    line-height: 50px;
+    color: #007bff;
+}
+
+.list-unstyled a {
+    text-decoration: none;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+#back-button:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.nav-menu,
+.header-social-icons {
+    display: flex;
+}
+
+.nav-menu,
+.header-social-icons li {
+    list-style: none;
+
+}
+
+.nav-menu li a {
+    text-decoration: none;
+    color: rgb(86, 84, 84);
+    font-size: 14px;
+    padding: 0px 10px;
+    padding-top: 20px;
+
+}
+
+.header-social-icons li a {
+    text-decoration: none;
+    color: rgb(86, 84, 84);
+    font-size: 14px;
+    padding: 0px 10px;
+    padding-top: 20px;
+
+}
+
+.header-content-wrapper svg {
+    height: 15px;
+}
+
+.top-menu .header-content-wrapper {
+    justify-content: space-between;
+}
+
+.header-content-wrapper {
+    max-width: 1180px;
+}
+
+@media (min-width: 54rem) {
+    .header-content-wrapper {
+        gap: .5rem;
+    }
+}
+
+.header-content-wrapper {
+    align-items: baseline;
+    display: flex;
+    height: 46px;
+    margin-top: 100px;
+    justify-content: space-between;
+    margin: auto;
+    padding: 10px 0;
+    width: 100%;
+}
+
+*,
+:after,
+:before {
+    box-sizing: inherit;
+}
+
+div {
+    display: block;
+    unicode-bidi: isolate;
+}
+
+.site-header {
+    font-size: 1rem;
+    position: relative;
+}
+
+body:not(.dark-mode) {
+    --wp--preset--color--link-headings: #101011;
+}
+
+.btn2 {
+    width: 200px;
+}
+
+.work {
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .button .btn2 {
+        margin: 0 15px;
+    }
+}
+
+@media (max-width: 681px) {
+    .header-content-wrapper {
+        display: none;
+    }
+}
+
+@media (max-width: 575px) {
+    .container .py-5 {
+        width: 300px;
+        margin: 0 20px;
+    }
+}
+
+@media(min-width: 992px) {
+    .col-lg-3 {
+        flex: 0 0 auto;
+        width: 22%;
+    }
+}

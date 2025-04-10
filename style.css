@@ -1,0 +1,393 @@
+.navbar-brand img {
+    height: 50px;
+}
+
+.navbar-brand .logotext {
+    height: 40px;
+    padding-top: 15px;
+
+}
+
+.active {
+    color: rgb(36, 123, 245) !important;
+}
+
+.homepage {
+    background: url(bg2.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 550px;
+    color: white;
+    object-fit: cover;
+}
+
+.homepage .content {
+    z-index: 10;
+}
+
+.elementor-section img {
+    height: 70px;
+    width: 70px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    margin-bottom: 15px;
+}
+
+.elementor-section img:hover {
+    transform: scale(1.2);
+}
+
+form .form-control {
+    padding-right: 2.5rem;
+}
+
+form button {
+    top: 50%;
+    transform: translateY(-50%);
+    color: #6c757d;
+}
+
+.counter-section {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #3498db;
+    margin-top: 10px;
+}
+
+.counter-number-suffix {
+    font-size: 1.5rem;
+    color: #3498db;
+}
+
+.card-container .card {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    width: 45%;
+    position: relative;
+    z-index: 2;
+}
+
+.card-container .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+h4.elementor {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.animate__animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+.animate__fadeInUp {
+    animation-name: fadeInUp;
+
+}
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 2;
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-section {
+    position: relative;
+    background: url(img2.png);
+    background-size: cover;
+    padding: 60px 0;
+    /* height: 100vh;  */
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.about-section .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.about-section h2,
+.about-section p {
+    position: relative;
+    z-index: 2;
+    color: white;
+
+}
+
+.about-section h2 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    margin-top: 13px;
+}
+
+
+.about-section p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 40px;
+
+}
+
+.about-img img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+    opacity: 0.9 black;
+}
+
+.about-img img:hover {
+    transform: scale(1.05);
+}
+
+.team-section {
+    background-color: #f4f4f4;
+    padding: 60px 0;
+}
+
+.team-section .team-member {
+    transition: transform 0.3s ease;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.team-section .team-member img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.team-section .team-member:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.team-section .team-member h5 {
+    font-size: 22px;
+    color: #333;
+    margin-top: 15px;
+}
+
+.team-section .team-member p {
+    font-size: 16px;
+    color: #777;
+}
+
+.services-section {
+    padding: 60px 0 0px 0px;
+}
+
+.services-section .service-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    height: 300px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.services-section .service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.service-icon {
+    font-size: 40px;
+    color: #2264f4;
+    margin-bottom: 20px;
+}
+
+.counter {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #3498db;
+}
+
+.counter-suffix {
+    font-size: 1.5rem;
+    color: #3498db;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+ 
+}
+
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.card {
+    width: 300px;
+    height: 300px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 2;
+    color: white;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.card p {
+    font-size: 1rem;
+    color: #666;
+}
+
+.client-carousel {
+    position: relative;
+    overflow: hidden;
+    height: 150px;
+}
+
+.client-images-wrapper {
+    display: flex;
+    animation: scroll-left 20s linear infinite;
+}
+
+.client-carousel img {
+    height: 100%;
+    margin-right: 30px;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (min-width:537px) {
+    .card-container {
+        display: flex;
+        flex-direction: row;
+    }
+
+
+}
+
+@media (max-width: 767px) {
+    .elementor-section img {
+        height: 50px;
+        width: 50px;
+    }
+
+    h4.elementor {
+        font-size: 1.2rem;
+    }
+
+    .screens {
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+}
+
+@media (max-width:537px) {
+    .screens {
+        margin-left: 10%;
+        margin-right: 10%;
+        padding-left: 0px;
+
+    }
+
+    .card-container .card {
+        width: 99%;
+    }
+
+}
+
+@media (max-width:377px) {
+    .screens {
+        margin-left: 1%;
+        margin-right: 1%;
+        padding-left: 0px;
+
+    }
+}
+
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@media (max-width: 767px) {
+    .client-carousel {
+        height: 100px;
+    }
+
+    .client-carousel img {
+        height: 80px;
+    }
+}
+
+@media (min-width: 768px) {
+    .client-carousel img {
+        height: 150px;
+    }
+}
+
+.sign {
+    background-color: transparent !important;
+    color: white !important;
+    border: white;
+}

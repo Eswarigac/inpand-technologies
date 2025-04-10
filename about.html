@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Inpand Technologies provides innovative solutions in web design, digital marketing, and technology consulting to help businesses grow and succeed.">
+    <meta name="keywords"
+        content="Inpand Technologies, technology solutions, web design, digital marketing, business growth, custom tech solutions, innovative solutions, tech consulting, 24*7 customer-service,">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>About Us </title>
+    <link rel="icon" type="image/png" href="logoicon.png">
+    <link href="style.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="index.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #fff;
+            color: #333;
+            margin: 0;
+        }
+
+        .hero-section {
+            background: url(img7.jpeg) no-repeat center center;
+            background-size: cover;
+            color: white;
+            padding: 82px 20px;
+            text-align: center;
+            border-radius: 0 0 15px 15px;
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+
+        }
+
+        .list-unstyled a {
+            text-decoration: none;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 0;
+        }
+
+        .hero-section h1,
+        .hero-section p {
+            position: relative;
+            z-index: 1;
+        }
+
+        .about-section1 {
+            padding: 80px 0;
+            background-color: #f1f1f1;
+        }
+
+        .about-text {
+            font-size: 18px;
+            color: #333;
+        }
+
+        .about-img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 15px;
+            transition: transform 0.3s ease;
+        }
+
+        .about-img:hover {
+            transform: scale(1.05);
+        }
+
+        .team-section1 {
+            background-color: #fff;
+            padding: 50px 0 80px 0px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .team-section1 .team-member {
+            text-align: center;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            background-color: #f8f9fa;
+            height: 250px;
+            margin: 5px 0;
+        }
+
+        .team-section1 .team-member:hover {
+            transform: translateY(-10px);
+        }
+
+        .team-section1 img {
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            margin-bottom: 20px;
+            cursor: pointer;
+        }
+
+        .modal-header,
+        .modal-body {
+            text-align: center;
+        }
+
+        .modal-body img {
+            max-width: 150px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+
+        .team-member-detail p {
+            text-align: left;
+        }
+
+        .footer {
+            background-color: #333;
+            color: #fff;
+            padding: 30px 0;
+        }
+
+        .footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .timeline-section {
+            padding: 50px 0 80px 0px;
+            background-color: #e9ecef;
+        }
+
+        .timeline-item {
+            border-left: 4px solid #007bff;
+            margin: 20px 0;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -9px;
+            top: 0;
+            background-color: #007bff;
+            border-radius: 50%;
+            width: 15px;
+            height: 15px;
+        }
+
+        .timeline-item h4 {
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        .timeline-item p {
+            font-size: 16px;
+        }
+
+        @media (max-width: 768px) {
+            .hero-section h1 {
+                font-size: 35px;
+            }
+
+            .hero-section p {
+                font-size: 16px;
+            }
+
+            .about-text {
+                font-size: 16px;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .search {
+            border-radius: 300px;
+        }
+
+        .chaty-channel {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            z-index: 1000;
+        }
+
+        .chaty-channel img {
+            width: 50px;
+            height: auto;
+        }
+
+        #back-button {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #fff;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            text-align: center;
+            font-size: 24px;
+            line-height: 50px;
+            color: #007bff;
+        }
+
+        #back-button:hover {
+            background-color: #007bff;
+            color: #fff;
+        }
+
+        .navbar-toggler {
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header-content-wrapper">
+        <ul id="top-menu" class="nav-menu">
+            <li class="location">
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-map-pin">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                        <circle cx="12" cy="10" r="3"></circle>
+                    </svg>&nbsp;Guziliamparai </a>
+            </li>
+            <li class="phone">
+                <a href="tel:6382016500">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="feather feather-phone">
+                        <path
+                            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                        </path>
+                    </svg>&nbsp;6382016500 </a>
+            </li>
+            <li class="mail">
+                <a href="mailto:email@example.com">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="feather feather-mail">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>&nbsp; info@inpand.com </a>
+            </li>
+        </ul>
+        <ul class="header-social-icons">
+            <li class="social-icon">
+                <a href="https://facebook.com/#" aria-label="facebook">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        class="feather feather-facebook" role="img" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                    </svg> </a>
+            </li>
+            <li class="social-icon">
+                <a href="https://www.instagram.com/inpand_technologies?igsh=cGVod2loY2w1NTc5" aria-label="instagram">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-instagram">
+                        <rect x="2" y="2" width="20" height="20"></rect>
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                    </svg> </a>
+            </li>
+            <li class="social-icon">
+                <a href="https://twitter.com/#" aria-label="twitter">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none"
+                        stroke="currentColor" stroke-width="2">
+                        <path
+                            d="M11 12.5L2.5 1.5H8L14.5 10.3833M11 12.5L18 22H23L14.5 10.3833M11 12.5L1.5 23M14.5 10.3833L22.5 1">
+                        </path>
+                    </svg> </a>
+            </li>
+            <li class="social-icon">
+                <a href="https://linkedin.com/#" aria-label="linkedin">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-linkedin">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                        <rect x="2" y="9" width="4" height="12"></rect>
+                        <circle cx="4" cy="4" r="2"></circle>
+                    </svg> </a>
+            </li>
+        </ul>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand d-flex" href="#">
+                <img src="logoicon.png" alt="logoicon">
+                <img src="logotext.png" alt="logotext" class="logotext">
+
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item pe-5">
+                        <a class="nav-link " aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item pe-5">
+                        <a class="nav-link active" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item pe-5">
+                        <a class="nav-link" href="service.html">Services</a>
+                    </li>
+                    <li class="nav-item pe-5">
+                        <a class="nav-link " href="gallery.html" tabindex="-1" aria-disabled="true">Gallery</a>
+                    </li>
+                    <li class="nav-item pe-5">
+                        <a class="nav-link " href="contact.html">Contact</a>
+                    </li>
+
+                </ul>
+
+                <form class="d-flex align-items-center position-relative" role="search">
+                    <input class="form-control search pe-5" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn position-absolute end-0 me-2 border-0 bg-transparent" type="submit">
+                        <i class="fa-solid fa-search"></i>
+                    </button>
+                </form>
+
+            </div>
+        </div>
+    </nav>
+    <section class="hero-section">
+        <div class="container">
+            <h1 class="animate__animated animate__fadeIn">About InPand Technologies</h1>
+            <p class="animate__animated animate__fadeIn">Empowering businesses with innovative and cutting-edge
+                technology solutions to take on the future.</p>
+        </div>
+    </section>
+
+    <section class="about-section1">
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-md-6">
+                    <h2 class="mb-4 animate__animated animate__fadeInUp">Who We Are</h2>
+                    <p class="about-text">At InPand Technologies, we specialize in crafting innovative web and mobile
+                        solutions for companies of all sizes. Our team is dedicated to pushing the boundaries of what's
+                        possible, helping businesses grow and succeed in the digital age. With a passion for technology
+                        and innovation, we strive to create experiences that captivate users and deliver results for
+                        businesses.</p>
+                </div>
+
+                <div class="col-md-6">
+                    <img src="img4.png" alt="About Image" class="about-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="timeline-section">
+        <div class="container">
+            <h2 class="mb-5 text-center animate__animated animate__fadeInUp">Our Journey</h2>
+            <div class="timeline-item animate__animated animate__fadeInUp">
+                <h4>2018 - Founded</h4>
+                <p>InPand Technologies was founded with a vision to provide high-quality tech solutions that solve
+                    real-world problems.</p>
+            </div>
+            <div class="timeline-item animate__animated animate__fadeInUp">
+                <h4>2020 - First Major Client</h4>
+                <p>Our team successfully delivered the first enterprise-level project for a global client in the
+                    e-commerce space.</p>
+            </div>
+            <div class="timeline-item animate__animated animate__fadeInUp">
+                <h4>2022 - Expansion</h4>
+                <p>We expanded our team and opened new offices to serve clients in diverse industries across the globe.
+                </p>
+            </div>
+            <div class="timeline-item animate__animated animate__fadeInUp">
+                <h4>2024 - Innovation</h4>
+                <p>Our innovations and solutions have continued to drive success for our clients, earning us several
+                    industry awards.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="team-section1">
+        <div class="container text-center">
+            <h2 class="mb-5">Meet Our Team</h2>
+            <div class="row">
+                <div class="col-md-4 " data-bs-toggle="modal" data-bs-target="#teamModal1">
+                    <div class="team-member">
+                        <img src="user.jpg" alt="Team Member 1">
+                        <h4>John Doe</h4>
+                        <p>CEO & Founder</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="team-member" data-bs-toggle="modal" data-bs-target="#teamModal2">
+                        <img src="user.jpg" alt="Team Member 2">
+                        <h4>Jane Smith</h4>
+                        <p>Chief Technology Officer</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="team-member" data-bs-toggle="modal" data-bs-target="#teamModal4">
+                        <img src="user.jpg" alt="Team Member 4">
+                        <h4>Michael Lee</h4>
+                        <p>Lead Developer</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <div class="modal fade" id="teamModal1" tabindex="-1" aria-labelledby="teamModalLabel1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="teamModalLabel1">John Doe - CEO & Founder</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="user.jpg" alt="John Doe">
+                    <div class="team-member-detail">
+                        <p><strong>John Doe</strong> is the visionary behind InPand Technologies, guiding the company’s
+                            growth with strategic direction and leadership. With over 15 years in the tech industry,
+                            John has been instrumental in the company’s rise to prominence. His expertise spans a
+                            variety of sectors, including web development, digital transformation, and software
+                            engineering.</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="teamModal2" tabindex="-1" aria-labelledby="teamModalLabel2" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="teamModalLabel2">Jane Smith - Chief Technology Officer</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="user.jpg" alt="Jane Smith">
+                    <div class="team-member-detail">
+                        <p><strong>Jane Smith</strong> is the CTO of InPand Technologies and oversees all technological
+                            developments. With a background in computer science and years of experience in software
+                            engineering, Jane is responsible for shaping InPand’s technical strategy, ensuring that the
+                            company stays on the cutting edge of innovation.</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="teamModal4" tabindex="-1" aria-labelledby="teamModalLabel4" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="teamModalLabel4">Michael Lee - Lead Developer</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="user.jpg" alt="Jane Smith">
+                    <div class="team-member-detail">
+                        <p><strong>Michael Lee</strong> is the Lead Developer at InPand Technologies. With his extensive
+                            knowledge of coding and development, Michael leads the engineering team, ensuring
+                            high-quality software solutions that meet the needs of clients.</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="back-button">
+        <i class="fas fa-angle-double-up"></i>
+    </div>
+    <div class="chaty-channel Whatsapp-channel-link single active chaty-tooltip pos-left has-on-hover"
+        id="Whatsapp-0-channel" data-id="Whatsapp-0" data-widget="0" data-channel="Whatsapp"><a
+            href="https://web.whatsapp.com/send?phone=6382016500&amp;text=" target="_blank" rel="nofollow noopener"
+            aria-label="Whatsapp" class="Whatsapp-channel chaty-link chaty-whatsapp-channel pos-left has-on-hover"
+            data-form="chaty-form-0-Whatsapp" data-hover="WhatsApp" data-text="Contact us"><span
+                class="chaty-icon channel-icon-Whatsapp"><span class="chaty-svg"><svg width="39" height="39"
+                        viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle class="color-element" cx="19.4395" cy="19.4395" r="19.4395" fill="#49E670"></circle>
+                        <path
+                            d="M12.9821 10.1115C12.7029 10.7767 11.5862 11.442 10.7486 11.575C10.1902 11.7081 9.35269 11.8411 6.84003 10.7767C3.48981 9.44628 1.39593 6.25317 1.25634 6.12012C1.11674 5.85403 2.13001e-06 4.39053 2.13001e-06 2.92702C2.13001e-06 1.46351 0.83755 0.665231 1.11673 0.399139C1.39592 0.133046 1.8147 1.01506e-06 2.23348 1.01506e-06C2.37307 1.01506e-06 2.51267 1.01506e-06 2.65226 1.01506e-06C2.93144 1.01506e-06 3.21063 -2.02219e-06 3.35022 0.532183C3.62941 1.19741 4.32736 2.66092 4.32736 2.79397C4.46696 2.92702 4.46696 3.19311 4.32736 3.32616C4.18777 3.59225 4.18777 3.59224 3.90858 3.85834C3.76899 3.99138 3.6294 4.12443 3.48981 4.39052C3.35022 4.52357 3.21063 4.78966 3.35022 5.05576C3.48981 5.32185 4.18777 6.38622 5.16491 7.18449C6.42125 8.24886 7.39839 8.51496 7.81717 8.78105C8.09636 8.91409 8.37554 8.9141 8.65472 8.648C8.93391 8.38191 9.21309 7.98277 9.49228 7.58363C9.77146 7.31754 10.0507 7.1845 10.3298 7.31754C10.609 7.45059 12.2841 8.11582 12.5633 8.38191C12.8425 8.51496 13.1217 8.648 13.1217 8.78105C13.1217 8.78105 13.1217 9.44628 12.9821 10.1115Z"
+                            transform="translate(12.9597 12.9597)" fill="#FAFAFA"></path>
+                        <path
+                            d="M0.196998 23.295L0.131434 23.4862L0.323216 23.4223L5.52771 21.6875C7.4273 22.8471 9.47325 23.4274 11.6637 23.4274C18.134 23.4274 23.4274 18.134 23.4274 11.6637C23.4274 5.19344 18.134 -0.1 11.6637 -0.1C5.19344 -0.1 -0.1 5.19344 -0.1 11.6637C-0.1 13.9996 0.624492 16.3352 1.93021 18.2398L0.196998 23.295ZM5.87658 19.8847L5.84025 19.8665L5.80154 19.8788L2.78138 20.8398L3.73978 17.9646L3.75932 17.906L3.71562 17.8623L3.43104 17.5777C2.27704 15.8437 1.55796 13.8245 1.55796 11.6637C1.55796 6.03288 6.03288 1.55796 11.6637 1.55796C17.2945 1.55796 21.7695 6.03288 21.7695 11.6637C21.7695 17.2945 17.2945 21.7695 11.6637 21.7695C9.64222 21.7695 7.76778 21.1921 6.18227 20.039L6.17557 20.0342L6.16817 20.0305L5.87658 19.8847Z"
+                            transform="translate(7.7758 7.77582)" fill="white" stroke="white" stroke-width="0.2"></path>
+                    </svg></span></span><span class="on-hover-text"></span></a><span class="on-hover-text"></span></div>
+    <footer class="bg-dark text-white pt-5 pb-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-5 mb-3 mb-md-0">
+                    <h5 class="text-uppercase mb-3">Company Info</h5>
+                    <p>We are a technology company providing innovative solutions to help businesses succeed. From web
+                        design to digital marketing, we offer a full range of services.</p>
+                    <h5 class="text-uppercase mb-3">Follow Us</h5>
+                    <ul class="list-unstyled d-flex">
+                        <li><a href="https://www.facebook.com/share/1B5XfaGJT9/" class="text-white me-3"><i
+                                    class="fab fa-facebook"></i></a></li>
+                        <li><a href="https://x.com/" class="text-white me-3"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="https://www.linkedin.com/" class="text-white me-3"><i
+                                    class="fab fa-linkedin"></i></a></li>
+                        <li><a href="https://www.instagram.com/inpand_technologies?igsh=cGVod2loY2w1NTc5"
+                                class="text-white me-3"><i class="fab fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+
+                <div class="col-12 col-md-3 mb-3 mb-md-0">
+                    <h5 class="text-uppercase mb-3">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white">Home</a></li>
+                        <li><a href="about.html" class="text-white">About</a></li>
+                        <li><a href="service.html" class="text-white">Services</a></li>
+                        <li><a href="gallery.html" class="text-white">Gallery</a></li>
+                        <li><a href="contact.html" class="text-white">Contact</a></li>
+                    </ul>
+                </div>
+
+
+
+                <div class="col-12 col-md-4">
+                    <h5 class="text-uppercase mb-3">Contact Info</h5>
+                    <p><i class="fas fa-map-marker-alt"></i> MRC Complex, Guziliamparai, Tamil Nadu-624703</p>
+                    <p><i class="fas fa-phone-alt"></i> +91 63820 16500</p>
+                    <p><i class="fas fa-envelope"></i> info@inpand.com</p>
+
+                </div>
+            </div>
+
+            <div class="row mt-4 pt-3 border-top">
+                <div class="col-12 text-center">
+                    <p>&copy; 2025 Inpand Technologies. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let backButton = document.getElementById("back-button");
+            window.addEventListener("scroll", function () {
+                if (window.scrollY > 300) {
+                    backButton.style.display = "block";
+                } else {
+                    backButton.style.display = "none";
+                }
+            });
+
+            backButton.addEventListener("click", function () {
+                window.scrollTo({ top: 0, behavior: "smooth" });
+            });
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/animate.css/animate.min.css"></script>
+</body>
+
+</html>

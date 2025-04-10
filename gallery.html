@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Inpand Technologies provides innovative solutions in web design, digital marketing, and technology consulting to help businesses grow and succeed.">
+  <meta name="keywords"
+    content="Inpand Technologies, technology solutions, web design, digital marketing, business growth, custom tech solutions, innovative solutions, tech consulting, 24*7 customer-service,">
+  <title>Inpand Technologies</title>
+  <link rel="icon" type="image/png" href="logoicon.png">
+  <link href="style.css" rel="stylesheet">
+  <link href="index.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <style>
+
+    .gallery-image {
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .gallery-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-image:hover img {
+      transform: scale(1.1);
+    }
+
+    .gallery-image:hover {
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    }
+
+
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal img {
+      max-width: 80%;
+      max-height: 80%;
+      border-radius: 5px;
+    }
+
+    .modal.active {
+      display: flex;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 30px;
+      color: white;
+      cursor: pointer;
+    }
+
+    .hero-section {
+      background: url(img7.jpeg) no-repeat center center;
+      background-size: cover;
+      color: white;
+      padding: 82px 20px;
+      text-align: center;
+      border-radius: 0 0 15px 15px;
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+
+    }
+
+    .search {
+      border-radius: 300px;
+    }
+
+    .list-unstyled a {
+      text-decoration: none;
+    }
+
+    .navbar-toggler {
+      border: none;
+    }
+
+    .hero-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 0;
+    }
+
+    .hero-section h1,
+    .hero-section p {
+      position: relative;
+      z-index: 1;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="header-content-wrapper">
+    <ul id="top-menu" class="nav-menu">
+      <li class="location">
+        <a href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="feather feather-map-pin">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+            <circle cx="12" cy="10" r="3"></circle>
+          </svg>&nbsp;Guziliamparai </a>
+      </li>
+      <li class="phone">
+        <a href="tel:6382016500">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="feather feather-phone">
+            <path
+              d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+            </path>
+          </svg>&nbsp;6382016500 </a>
+      </li>
+      <li class="mail">
+        <a href="mailto:email@example.com">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="feather feather-mail">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+            <polyline points="22,6 12,13 2,6"></polyline>
+          </svg>&nbsp; info@inpand.com </a>
+
+      </li>
+    </ul>
+    <ul class="header-social-icons">
+      <li class="social-icon">
+        <a href="https://facebook.com/#" aria-label="facebook">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+            class="feather feather-facebook" role="img" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+          </svg> </a>
+      </li>
+      <li class="social-icon">
+        <a href="https://www.instagram.com/inpand_technologies?igsh=cGVod2loY2w1NTc5" aria-label="instagram">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="feather feather-instagram">
+            <rect x="2" y="2" width="20" height="20"></rect>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+          </svg> </a>
+      </li>
+      <li class="social-icon">
+        <a href="https://twitter.com/#" aria-label="twitter">
+          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none"
+            stroke="currentColor" stroke-width="2">
+            <path d="M11 12.5L2.5 1.5H8L14.5 10.3833M11 12.5L18 22H23L14.5 10.3833M11 12.5L1.5 23M14.5 10.3833L22.5 1">
+            </path>
+          </svg> </a>
+      </li>
+      <li class="social-icon">
+        <a href="https://linkedin.com/#" aria-label="linkedin">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="feather feather-linkedin">
+            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+            <rect x="2" y="9" width="4" height="12"></rect>
+            <circle cx="4" cy="4" r="2"></circle>
+          </svg> </a>
+      </li>
+    </ul>
+  </div>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex" href="#">
+        <img src="logoicon.png" alt="logoicon">
+        <img src="logotext.png" alt="logotext" class="logotext">
+
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item pe-5">
+            <a class="nav-link " aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item pe-5">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item pe-5">
+            <a class="nav-link" href="service.html">Services</a>
+          </li>
+          <li class="nav-item pe-5">
+            <a class="nav-link active" href="gallery.html" tabindex="-1" aria-disabled="true">Gallery</a>
+          </li>
+          <li class="nav-item pe-5">
+            <a class="nav-link " href="contact.html">Contact</a>
+          </li>
+
+        </ul>
+        <form class="d-flex align-items-center position-relative" role="search">
+          <input class="form-control search pe-5" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn position-absolute end-0 me-2 border-0 bg-transparent" type="submit">
+            <i class="fa-solid fa-search"></i>
+          </button>
+        </form>
+
+      </div>
+    </div>
+  </nav>
+  <section class="hero-section">
+    <h1>Our Gallery - Inpand Technologies</h1>
+    <p>Explore our collection of creative projects and innovative solutions that have helped our clients succeed. Take a
+      look at the work we've done and get inspired for your next project.</p>
+  </section>
+
+
+  <section class="py-12 px-6 max-w-7xl mx-auto container mb-5">
+    <h2 class="text-3xl font-semibold text-center mb-8">Our Gallery</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6  row">
+
+      <div class="gallery-image col-12 col-lg-3 col-sm-6 g-3" data-src="g1.jpg">
+        <img src="g1.jpg" alt="Gallery Image" class=" h-60 object-cover" />
+      </div>
+      <div class="gallery-image col-12 col-lg-3 col-sm-6 g-3" data-src="img1.webp">
+        <img src="img1.webp" alt="Gallery Image" class="w-full h-60 object-cover" />
+      </div>
+      <div class="gallery-image col-12 col-lg-3 col-sm-6 g-3" data-src="g10.jpg">
+        <img src="g10.jpg" alt="Gallery Image" class="w-full h-60 object-cover" />
+      </div>
+      <div class="gallery-image col-12 col-lg-3 col-sm-6 g-3" data-src="g2.jpg">
+        <img src="g2.jpg" alt="Gallery Image" class="w-full h-60 object-cover" />
+      </div>
+
+      <div
+        class="overflow-hidden rounded-2xl col-sm-6 shadow-md hover:shadow-xl transition gallery-image col-12 col-lg-3 g-3"
+        data-src="g3.jpg">
+        <img src="g3.jpg" alt="Gallery Image" class="w-full h-60 object-cover" />
+      </div>
+      <div
+        class="overflow-hidden rounded-2xl col-sm-6 shadow-md hover:shadow-xl transition gallery-image col-12 col-lg-3 g-3"
+        data-src="g4.jpg">
+        <img src="g4.jpg" alt="Gallery Image" class="w-full h-60 object-cover" />
+      </div>
+      <div
+        class="overflow-hidden rounded-2xl col-sm-6 shadow-md hover:shadow-xl transition gallery-image col-12 col-lg-3 g-3"
+        data-src="g5.jpg">
+        <img src="g5.jpg" alt="Gallery Image" class="w-full h-60 object-cover" />
+      </div>
+      <div
+        class="overflow-hidden rounded-2xl col-sm-6 shadow-md hover:shadow-xl transition gallery-image col-12 col-lg-3 g-3"
+        data-src="g6.jpg">
+        <img src="g6.jpg" alt="Gallery Image" class="w-full h-60 object-cover" />
+      </div>
+      <div
+        class="overflow-hidden rounded-2xl col-sm-6 shadow-md hover:shadow-xl transition gallery-image col-12 col-lg-3 g-3"
+        data-src="g7.jpg">
+        <img src="g7.jpg" alt="Gallery Image" class="w-full h-60 object-cover" />
+      </div>
+      <div
+        class="overflow-hidden rounded-2xl col-sm-6 shadow-md hover:shadow-xl transition gallery-image col-12 col-lg-3 g-3"
+        data-src="g8.jpg">
+        <img src="g8.jpg" alt="Gallery Image" class="w-full h-60 object-cover" />
+      </div>
+      <div
+        class="overflow-hidden rounded-2xl col-sm-6 shadow-md hover:shadow-xl transition gallery-image col-12 col-lg-3 g-3"
+        data-src="g9.jpg">
+        <img src="g9.jpg" alt="Gallery Image" class="w-full h-60 object-cover" />
+      </div>
+      <div
+        class="overflow-hidden rounded-2xl col-sm-6 shadow-md hover:shadow-xl transition gallery-image col-12 col-lg-3 g-3"
+        data-src="g11.jpg">
+        <img src="g11.jpg" alt="Gallery Image" class="w-full h-60 object-cover" />
+      </div>
+
+
+    </div>
+  </section>
+  <div class="modal" id="imageModal">
+    <div class="modal-close" id="modalClose">&times;</div>
+    <img src="g1.jpg" alt="Popup Image" id="modalImage">
+  </div>
+  <div id="back-button">
+    <i class="fas fa-angle-double-up"></i>
+  </div>
+
+  <div class="chaty-channel Whatsapp-channel-link single active chaty-tooltip pos-left has-on-hover"
+    id="Whatsapp-0-channel" data-id="Whatsapp-0" data-widget="0" data-channel="Whatsapp"><a
+      href="https://web.whatsapp.com/send?phone=6382016500&amp;text=" target="_blank" rel="nofollow noopener"
+      aria-label="Whatsapp" class="Whatsapp-channel chaty-link chaty-whatsapp-channel pos-left has-on-hover"
+      data-form="chaty-form-0-Whatsapp" data-hover="WhatsApp" data-text="Contact us"><span
+        class="chaty-icon channel-icon-Whatsapp"><span class="chaty-svg"><svg width="39" height="39" viewBox="0 0 39 39"
+            fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle class="color-element" cx="19.4395" cy="19.4395" r="19.4395" fill="#49E670"></circle>
+            <path
+              d="M12.9821 10.1115C12.7029 10.7767 11.5862 11.442 10.7486 11.575C10.1902 11.7081 9.35269 11.8411 6.84003 10.7767C3.48981 9.44628 1.39593 6.25317 1.25634 6.12012C1.11674 5.85403 2.13001e-06 4.39053 2.13001e-06 2.92702C2.13001e-06 1.46351 0.83755 0.665231 1.11673 0.399139C1.39592 0.133046 1.8147 1.01506e-06 2.23348 1.01506e-06C2.37307 1.01506e-06 2.51267 1.01506e-06 2.65226 1.01506e-06C2.93144 1.01506e-06 3.21063 -2.02219e-06 3.35022 0.532183C3.62941 1.19741 4.32736 2.66092 4.32736 2.79397C4.46696 2.92702 4.46696 3.19311 4.32736 3.32616C4.18777 3.59225 4.18777 3.59224 3.90858 3.85834C3.76899 3.99138 3.6294 4.12443 3.48981 4.39052C3.35022 4.52357 3.21063 4.78966 3.35022 5.05576C3.48981 5.32185 4.18777 6.38622 5.16491 7.18449C6.42125 8.24886 7.39839 8.51496 7.81717 8.78105C8.09636 8.91409 8.37554 8.9141 8.65472 8.648C8.93391 8.38191 9.21309 7.98277 9.49228 7.58363C9.77146 7.31754 10.0507 7.1845 10.3298 7.31754C10.609 7.45059 12.2841 8.11582 12.5633 8.38191C12.8425 8.51496 13.1217 8.648 13.1217 8.78105C13.1217 8.78105 13.1217 9.44628 12.9821 10.1115Z"
+              transform="translate(12.9597 12.9597)" fill="#FAFAFA"></path>
+            <path
+              d="M0.196998 23.295L0.131434 23.4862L0.323216 23.4223L5.52771 21.6875C7.4273 22.8471 9.47325 23.4274 11.6637 23.4274C18.134 23.4274 23.4274 18.134 23.4274 11.6637C23.4274 5.19344 18.134 -0.1 11.6637 -0.1C5.19344 -0.1 -0.1 5.19344 -0.1 11.6637C-0.1 13.9996 0.624492 16.3352 1.93021 18.2398L0.196998 23.295ZM5.87658 19.8847L5.84025 19.8665L5.80154 19.8788L2.78138 20.8398L3.73978 17.9646L3.75932 17.906L3.71562 17.8623L3.43104 17.5777C2.27704 15.8437 1.55796 13.8245 1.55796 11.6637C1.55796 6.03288 6.03288 1.55796 11.6637 1.55796C17.2945 1.55796 21.7695 6.03288 21.7695 11.6637C21.7695 17.2945 17.2945 21.7695 11.6637 21.7695C9.64222 21.7695 7.76778 21.1921 6.18227 20.039L6.17557 20.0342L6.16817 20.0305L5.87658 19.8847Z"
+              transform="translate(7.7758 7.77582)" fill="white" stroke="white" stroke-width="0.2"></path>
+          </svg></span></span><span class="on-hover-text"></span></a><span class="on-hover-text"></span></div>
+  <footer class="bg-dark text-white pt-5 pb-3">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-5 mb-3 mb-md-0">
+          <h5 class="text-uppercase mb-3">Company Info</h5>
+          <p>We are a technology company providing innovative solutions to help businesses succeed. From web
+            design to digital marketing, we offer a full range of services.</p>
+          <h5 class="text-uppercase mb-3">Follow Us</h5>
+          <ul class="list-unstyled d-flex">
+            <li><a href="https://www.facebook.com/share/1B5XfaGJT9/" class="text-white me-3"><i
+                  class="fab fa-facebook"></i></a></li>
+            <li><a href="https://x.com/" class="text-white me-3"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="https://www.linkedin.com/" class="text-white me-3"><i class="fab fa-linkedin"></i></a></li>
+            <li><a href="https://www.instagram.com/inpand_technologies?igsh=cGVod2loY2w1NTc5" class="text-white me-3"><i
+                  class="fab fa-instagram"></i></a></li>
+          </ul>
+        </div>
+
+        <div class="col-12 col-md-3 mb-3 mb-md-0">
+          <h5 class="text-uppercase mb-3">Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="index.html" class="text-white">Home</a></li>
+            <li><a href="about.html" class="text-white">About</a></li>
+            <li><a href="service.html" class="text-white">Services</a></li>
+            <li><a href="gallery.html" class="text-white">Gallery</a></li>
+            <li><a href="contact.html" class="text-white">Contact</a></li>
+          </ul>
+        </div>
+
+
+
+        <div class="col-12 col-md-4">
+          <h5 class="text-uppercase mb-3">Contact Info</h5>
+          <p><i class="fas fa-map-marker-alt"></i> MRC Complex, Guziliamparai, Tamil Nadu-624703</p>
+          <p><i class="fas fa-phone-alt"></i> +91 63820 16500</p>
+          <p><i class="fas fa-envelope"></i> info@inpand.com</p>
+
+        </div>
+      </div>
+
+      <div class="row mt-4 pt-3 border-top">
+        <div class="col-12 text-center">
+          <p>&copy; 2025 Inpand Technologies. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      let backButton = document.getElementById("back-button");
+      window.addEventListener("scroll", function () {
+        if (window.scrollY > 300) {
+          backButton.style.display = "block";
+        } else {
+          backButton.style.display = "none";
+        }
+      });
+
+      backButton.addEventListener("click", function () {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+    });
+  </script>
+
+  <script>
+    const images = document.querySelectorAll('.gallery-image');
+    const modal = document.getElementById('imageModal');
+    const modalImage = document.getElementById('modalImage');
+    const modalClose = document.getElementById('modalClose');
+
+    images.forEach(image => {
+      image.addEventListener('click', () => {
+        const imageSrc = image.getAttribute('data-src');
+        modalImage.src = imageSrc;
+        modal.classList.add('active');
+      });
+    });
+
+    modalClose.addEventListener('click', () => {
+      modal.classList.remove('active');
+    });
+
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.classList.remove('active');
+      }
+    });
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
